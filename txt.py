@@ -60,3 +60,33 @@ for i in range(0,len(myarr)):
 name=input("enter a number:")
 print('hello',name)
 
+class student:
+    mark=[]
+    def getdata(self, rollno, name, m1, m2, m3):
+        student.rollno = rollno
+        student.name = name
+        student.mark.append(m1)
+        student.mark.append(m2)
+        student.mark.append(m3)
+
+    def displaydata(self):
+        print("rollno is :",student.rollno)
+        print("name is :",student.name)
+        print("marks are:",student.mark)
+        print("total mark are:",self.total())
+        print("average make:",self.average())
+
+    def total(self):
+        return (student.mark[0] + student.mark[1] +student.mark[2])
+    def average(self):
+        return ((student.mark[0] + student.mark[1] + student.mark[2]/3))
+
+rollno= int  (input("enter the rollno:"))
+name = input("enter the name:")
+m1= int  (input("enter the mark 1 :"))
+m2= int  (input("enter the mark 2 :"))
+m3= int  (input("enter the mark 3 :"))
+
+s1=student()
+s1.getdata(rollno,name, m1,m2,m3)
+s1.displaydata()
